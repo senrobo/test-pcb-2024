@@ -5,6 +5,125 @@
 	(uuid "ebf6433e-bc0f-46d5-94f3-d4d29134e206")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:Conn_01x01_Pin"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x01_Pin"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x01, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x01_Pin_1_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
 				(offset 1.016) hide)
@@ -1500,6 +1619,12 @@
 		(color 0 0 0 0)
 		(uuid "855614f1-8af6-4746-a0df-99dcdc9a34d4")
 	)
+	(junction
+		(at 107.95 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1375e28-1bd5-4f4e-a48f-f444d6e1bddf")
+	)
 	(wire
 		(pts
 			(xy 138.43 99.06) (xy 140.97 99.06)
@@ -1822,6 +1947,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 91.44) (xy 107.95 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db3df4a2-e9e7-41d7-982d-6bbc506ce227")
+	)
+	(wire
+		(pts
 			(xy 148.59 104.14) (xy 148.59 111.76)
 		)
 		(stroke
@@ -1839,6 +1974,16 @@
 			(type default)
 		)
 		(uuid "e4f89315-bc92-4013-9830-c8327976cc37")
+	)
+	(wire
+		(pts
+			(xy 107.95 91.44) (xy 107.95 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5e9eebb-7538-4485-bbc9-f04b7ee28c64")
 	)
 	(wire
 		(pts
@@ -1869,6 +2014,36 @@
 			(type default)
 		)
 		(uuid "fab817ab-ee9f-4b47-8708-3c85d33f1b93")
+	)
+	(text "put decoup caps as close to gate drive IC"
+		(exclude_from_sim no)
+		(at 198.628 85.344 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "307b2226-a529-43a0-b17f-d934524e71a6")
+	)
+	(text "put driver as close to mosfet as possible\n"
+		(exclude_from_sim no)
+		(at 198.12 81.788 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3d9ff523-59b0-4a29-9c13-1adb861874ff")
+	)
+	(text "keep traces short and wide"
+		(exclude_from_sim no)
+		(at 191.008 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "601f6470-6b28-45ff-b9be-46b3e52fcd78")
 	)
 	(global_label "Sol"
 		(shape input)
@@ -1909,7 +2084,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100"
 			(at 132.08 101.6 90)
 			(effects
 				(font
@@ -1976,7 +2151,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100"
 			(at 132.08 96.52 90)
 			(effects
 				(font
@@ -2021,6 +2196,71 @@
 			(project "main"
 				(path "/55c0a6b2-6fc9-44ca-8d10-659d11d090d5/e2785760-ff03-4094-8a17-cb2995826734"
 					(reference "BSR2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 97.79 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ad4958c-fce8-4192-9e58-5474ee688bcd")
+		(property "Reference" "J3"
+			(at 98.425 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 98.425 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 97.79 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 97.79 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "834038d2-e3b4-4f3c-ad63-e333b726754b")
+		)
+		(instances
+			(project ""
+				(path "/55c0a6b2-6fc9-44ca-8d10-659d11d090d5/e2785760-ff03-4094-8a17-cb2995826734"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -2219,7 +2459,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.1u"
 			(at 137.16 78.7399 0)
 			(effects
 				(font
